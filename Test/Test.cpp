@@ -97,7 +97,7 @@ int main()
 			cout << a[i];
 		}
 	}
-	else if (task == 6) {
+	else if (task == 6) {//побитовое сравнение
 		cin >> n;
 		cin >> n2;
 
@@ -110,7 +110,7 @@ int main()
 			cout << (a[i] == b[i]);
 		}
 	}
-	if (task == 7) {
+	if (task == 7) {//битовая инверция
 		cin >> n;
 		make_arr(a, n);
 		show_arr(a);
@@ -119,22 +119,32 @@ int main()
 		}
 		show_arr(a);
 	}
-	if (task == 8) {
+	if (task == 8) {//четный и неч обмен
 		cin >> n;
 		cin >> n2;
 		make_arr(a, n);
 		make_arr(b, n2);
 		show_arr(a);
 		show_arr(b);
-		for (int i = 0; i < 32; i+=2) {
-			a[i] = b[i];
+		int ch[32]; make_arr(ch, n);
+		int nch[32]; make_arr(nch, n2);
+		for (int i = 0; i < 32; i++) {
+			if (i % 2)
+				ch[i] = a[i];
+			else
+				ch[i] = b[i];
 		}
-		for (int i = 1; i < 32; i += 2) {
-			b[i] = a[i];
+		for (int i = 0; i < 32; i++) {
+			if (!(i % 2))
+				nch[i] = a[i];
+			else
+				nch[i] = b[i];
 		}
-		show_arr(a);
-		show_arr(b);
+		show_arr(ch);
+		show_arr(nch);
 	}
+	if (task == 9)
+		cout << "In progress";
 	else
 		cout << "Incorrect task number!";
 
