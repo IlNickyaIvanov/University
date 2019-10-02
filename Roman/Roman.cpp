@@ -1,9 +1,9 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <iomanip>
 using namespace std;
 
-string to_roman(unsigned int value)
+string toroman(int value)
 {
 	struct romandata_t { unsigned int value; char const* numeral; };
 	const struct romandata_t romandata[] =
@@ -32,8 +32,9 @@ string to_roman(unsigned int value)
 
 int main()
 {
+	cout << "Input num: ";
 	int n; cin >> n;
-	to_roman(n);
+	cout<<endl<<toroman(n)<<endl;
 	system("PAUSE");
 	return 0;
 }
