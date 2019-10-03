@@ -26,7 +26,7 @@ int main() {
 		int d = 13;
 		int count = 0;
 		for (y = 1900; y < 2000; y++) {
-			for (m = 1; m < 12; m++) {
+			for (m = 1; m <= 12; m++) {
 				if( (d + y + y / 4 - y / 100 + y / 400 + 31 * m / 12) % 7 + 1 == 4)
 					count += 1;
 			}
