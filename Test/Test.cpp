@@ -110,7 +110,7 @@ int main()
 			cout << (a[i] == b[i]);
 		}
 	}
-	if (task == 7) {//битовая инверция
+	else if (task == 7) {//битовая инверция
 		cin >> n;
 		make_arr(a, n);
 		show_arr(a);
@@ -119,7 +119,7 @@ int main()
 		}
 		show_arr(a);
 	}
-	if (task == 8) {//четный и неч обмен
+	else if (task == 8) {//четный и неч обмен
 		cin >> n;
 		cin >> n2;
 		make_arr(a, n);
@@ -143,7 +143,7 @@ int main()
 		show_arr(ch);
 		show_arr(nch);
 	}
-	if (task == 9)
+	else if (task == 9)
 		cout << "In progress";
 	else
 		cout << "Incorrect task number!";

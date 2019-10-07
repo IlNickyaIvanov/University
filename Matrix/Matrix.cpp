@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-void make_vec(vector<vector<int>>& mx, int n, int m) {
+void make_matrix(vector<vector<int>>& mx, int n, int m) {
 	for (int i = 0; i < n; i++) {
 		vector<int> l;
 		int k = 0;
@@ -15,7 +15,7 @@ void make_vec(vector<vector<int>>& mx, int n, int m) {
 	}
 }
 
-void show_vec(vector<vector<int>>& a) {
+void show_matrix(vector<vector<int>>& a) {
 	for (int i = 0; i < a.size(); i++) {
 		for (int j = 0; j < a[0].size(); j++)
 			cout << a[i][j] << " ";
@@ -23,7 +23,7 @@ void show_vec(vector<vector<int>>& a) {
 	}
 }
 
-bool mult_vec(vector<vector<int>>& m1, vector<vector<int>>& m2, vector<vector<int>>& r) {
+bool mult_matrix(vector<vector<int>>& m1, vector<vector<int>>& m2, vector<vector<int>>& r) {
 	if (m1[0].size() != m2.size()) {
 		cout << "Incorrect size for mult \n";
 		return false;
@@ -57,21 +57,21 @@ int main()
 	cin >> n;
 	cin >> m;
 	vector<vector <int>> matrix1;
-	make_vec(matrix1, n, m);
+	make_matrix(matrix1, n, m);
 
 	cout << "Input size (n m): ";
 	cin >> n;
 	cin >> m;
 	vector<vector <int>> matrix2;
-	make_vec(matrix2, n, m);
+	make_matrix(matrix2, n, m);
 
 	vector<vector<int>> mult;
-	mult_vec(matrix1, matrix2, mult);
+	mult_matrix(matrix1, matrix2, mult);
 	cout << "Multiplication is: \n";
-	show_vec(mult);
+	show_matrix(mult);
 	cout << "Transpose is:\n";
 	vector<vector<int>> transp;
 	transpose(mult, transp);
-	show_vec(transp);
+	show_matrix(transp);
 
 }
